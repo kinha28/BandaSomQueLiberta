@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+
+body {
+  background: black;
+  margin: 0;
+  padding: 0;
+  font-family: "Playwrite DK Loopet", cursive;
+}
+
+/* Cabeçalho */
+h1 {
+  text-align: center;
+  color: gold;
+  text-shadow: 1px 1px 1px #F5F5F5;
+  font-size: 1.2rem;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background: gold;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Links */
+a {
+  font-family: "Playwrite DK Loopet", cursive;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Carrossel */
+.carrossel {
+  width: 100%;
+  height: 300px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carrossel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.carrossel img.ativo {
+  display: block;
+}
+
+/* Legendas */
+.legendas {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.legendas span {
+  display: none;
+}
+
+.legendas span.ativa {
+  display: inline-block;
+  color: gold;
+  text-decoration: underline;
+}
+
+/* Texto final */
+.text-final {
+  color: gold;
+  text-shadow: 2px 2px 2px #F5F5F5;
+  font-size: 0.4rem;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Seção sobre */
+.sobre {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: gold;
+  text-align: center;
+}
+
+.sobre h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #F5F5F5;
+}
+
+.sobre p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 1px #222;
+}
+
+/* Seção contato */
+.contato {
+  text-align: center;
+  color: gold;
+  padding: 20px;
+}
+
+.contato h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #F5F5F5;
+}
+
+.contato p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contato a {
+  text-decoration: none;
+  color: gold;
+  font-weight: bold;
+}
+
+.contato a:hover {
+  text-decoration: underline;
+  background: black;
+}
+
+.ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh; /* altura mínima da área */
+}
+
+
+/* Logo Instagram */
+.logo {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 5px;
+}
+
+/* Rodapé */
+.voltar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid gold;
+}
+
+.voltar a {
+  font-family: "Playwrite DK Loopet", cursive;
+  font-size: 1rem;
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.voltar a:hover {
+  text-decoration: underline;
+  background: black;
+}
+
+.containerSobre {
+  padding-bottom: 60px;
+}
+/* Para celular */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+    gap: 10px; /* adiciona espaço entre os itens */
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* mais espaço entre os <li> */
+  }
+
+  li {
+    padding: 0;
+  }
+
+  .sobre h2,
+  .contato h2 {
+    font-size: 1.2rem;
+  }
+
+  .sobre p,
+  .contato p {
+    font-size: 0.9rem;
+  }
+
+  .voltar a {
+    font-size: 0.9rem;
+  }
+
+  .text-final {
+    font-size: 0.6rem;
+  }
+
+  .logo {
+    width: 20px;
+    height: 20px;
+  }
+
+  .container, .sobre, .contato {
+    padding: 0 15px;
+  }
+
+  .containerSobre {
+    padding-bottom: 80px;
+  }
+}
+/* Para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 0;
+    height: auto;
+  }
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  li {
+    padding: 10px 20px;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+}
