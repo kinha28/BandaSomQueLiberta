@@ -272,4 +272,14 @@ a:hover {
   a {
     font-size: 1rem;
   }
+
+  .carrossel {
+    height: auto;
+  }
+
+  .carrossel img {
+    height: auto;
+    max-height: 400px;
+    object-fit: contain; /* ou "cover", dependendo do efeito desejado */
+  }
 }
